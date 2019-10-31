@@ -2,8 +2,9 @@
 
 // By placing the unique key of the resource you are creating in the id attribute of the <button> (see below), you can use the JavaScript split() method to extract it when the button is clicked.
 
-export default recipe => `
-    <section class="recipe--${recipe.id}">
+const createRecipeCard = (recipe) => {
+    return `
+        <section class="recipe--${recipe.id}">
         <header class="recipe__title">
             ${recipe.title}
         </header>
@@ -14,4 +15,7 @@ export default recipe => `
             Delete Recipe
         </button>
     </section>
-`
+     `
+}
+
+export default createRecipeCard
